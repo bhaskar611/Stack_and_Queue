@@ -32,10 +32,10 @@ public class LinkedList{
 		this.head = head;
 	}
 
-	
 	static class Node<T extends Comparable<T>>{
 		private T data;
 		private Node next;
+		
 		
 		public T getData() {
 			return data;
@@ -46,11 +46,11 @@ public class LinkedList{
 			this.data = data;
 		}
 
+		
 		public Node getNext() {
 			return next;
 		}
 
-		
 		public void setNext(Node next) {
 			this.next = next;
 		}
