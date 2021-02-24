@@ -23,9 +23,41 @@ public class StackTest
     public void pushOnStackTest_Correct(){
         assertEquals(stack.getTop().getData() , stack.getStack().returnFirst());
     }
-   
+    
     @Test
     public void pushOnStackTest_InCorrect(){
         assertNotEquals(10 , stack.getStack().returnFirst());
+    }
+    
+    @Test
+    public void peekFromStackTest_Correct(){
+        assertEquals(56 , stack.peek());
+    }
+   
+    @Test
+    public void peekFromStackTest_InCorrect(){
+        assertNotEquals(10 , stack.peek());
+    }
+    
+    @Test
+    public void popFromStackTest_Correct(){
+        assertEquals(56 , stack.pop());
+    }
+   
+    @Test
+    public void popFromStackTest_InCorrect(){
+        assertNotEquals(10 , stack.pop());
+    }
+   
+    @Test
+    public void popFromStackSizeTest_Correct(){
+    	stack.pop();
+        assertEquals(2 , stack.getStack().getSize());
+    }
+    
+    @Test
+    public void popFromStackSizeTest_InCorrect(){
+    	stack.pop();
+        assertNotEquals(3 , stack.getStack().getSize());
     }
 }
