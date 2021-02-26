@@ -3,6 +3,9 @@ package com.stack.stack_and_queue;
 import java.util.Scanner;
 
 
+import java.util.Scanner;
+
+
 public class LinkedList{
 	private int size;
 	private Node head;
@@ -32,6 +35,7 @@ public class LinkedList{
 		this.head = head;
 	}
 
+	
 	static class Node<T extends Comparable<T>>{
 		private T data;
 		private Node next;
@@ -51,6 +55,7 @@ public class LinkedList{
 			return next;
 		}
 
+		
 		public void setNext(Node next) {
 			this.next = next;
 		}
@@ -71,7 +76,7 @@ public class LinkedList{
 	}
 	
 	
-	public <T extends Comparable<T>> void addNodeAtLast(T data) {
+	public <T extends Comparable<T>> Node addNodeAtLast(T data) {
 		Node n = new Node(data);
 		Node t = head;
 		if(t == null){
@@ -83,6 +88,7 @@ public class LinkedList{
 			t.next = n;
 		}
 		size++;
+		return n;
 	}
 	
 	
