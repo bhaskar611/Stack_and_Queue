@@ -1,7 +1,5 @@
 package com.stack.stack_and_queue;
 
-import java.util.Scanner;
-
 
 import java.util.Scanner;
 
@@ -39,7 +37,6 @@ public class LinkedList{
 	static class Node<T extends Comparable<T>>{
 		private T data;
 		private Node next;
-		
 		
 		public T getData() {
 			return data;
@@ -132,13 +129,16 @@ public class LinkedList{
 	}
 	
 	
-	public <T> void pop() {
+	public <T> T pop() {
 		if(head==null) {
-			System.out.println("The list is empty, no elements to remove");
+			System.out.println("The list is empty, no elements to remove. Returning null");
+			return null;
 		}
 		else {
+			Node n = head;
 			head = head.next;
 			size--;
+			return (T)n.data;
 		}
 	}
 	
